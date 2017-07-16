@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullContactSharp", "FullContactSharp\FullContactSharp.csproj", "{C983BEFC-AFD8-4DD2-8476-B38F3C7D449A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullContactSharpTests", "FullContaxtSharpTests\FullContactSharpTests.csproj", "{6010D6DF-F00B-484F-97B2-95F868505A2B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C983BEFC-AFD8-4DD2-8476-B38F3C7D449A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C983BEFC-AFD8-4DD2-8476-B38F3C7D449A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C983BEFC-AFD8-4DD2-8476-B38F3C7D449A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C983BEFC-AFD8-4DD2-8476-B38F3C7D449A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6010D6DF-F00B-484F-97B2-95F868505A2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6010D6DF-F00B-484F-97B2-95F868505A2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6010D6DF-F00B-484F-97B2-95F868505A2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6010D6DF-F00B-484F-97B2-95F868505A2B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

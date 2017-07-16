@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C983BEFC-AFD8-4DD2-8476-B38F3C7D449A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>FullContactSharp</RootNamespace>
+    <AssemblyName>FullContactSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <Description>FullContact.com API Wrapper in C#.</Description>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Base\Request.cs" />
+    <Compile Include="Request\PersonRequest.cs" />
+    <Compile Include="Core\Service.cs" />
+    <Compile Include="Enum\Confidence.cs" />
+    <Compile Include="Model\Photo.cs" />
+    <Compile Include="Model\ContactInfo.cs" />
+    <Compile Include="Model\SocialProfile.cs" />
+    <Compile Include="Model\PersonData.cs" />
+    <Compile Include="Enum\PersonLookup.cs" />
+    <Compile Include="Core\HttpParams.cs" />
+    <Compile Include="Enum\StatusCode.cs" />
+    <Compile Include="Request\CompanyRequest.cs" />
+    <Compile Include="Enum\CompanyLookup.cs" />
+    <Compile Include="Response\PersonResponse.cs" />
+    <Compile Include="Enum\Endpoint.cs" />
+    <Compile Include="Response\CompanyResponse.cs" />
+    <Compile Include="Model\CompanyData.cs" />
+    <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\EmailAddress.cs" />
+    <Compile Include="Model\PhoneNumber.cs" />
+    <Compile Include="Model\Region.cs" />
+    <Compile Include="Model\Country.cs" />
+    <Compile Include="Model\Address.cs" />
+    <Compile Include="Model\Link.cs" />
+    <Compile Include="Model\Image.cs" />
+    <Compile Include="Model\Organization.cs" />
+    <Compile Include="Model\TopCountryRanking.cs" />
+    <Compile Include="Model\Ranking.cs" />
+    <Compile Include="Model\Traffic.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Base\" />
+    <Folder Include="Request\" />
+    <Folder Include="Core\" />
+    <Folder Include="Model\" />
+    <Folder Include="Enum\" />
+    <Folder Include="Response\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
