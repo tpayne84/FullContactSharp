@@ -2,7 +2,7 @@
 using FullContactSharp;
 using NUnit.Framework;
 
-namespace FullContaxtSharpTests
+namespace FullContactSharpTests
 {
     /// <summary>
     /// Person response tests.
@@ -15,8 +15,8 @@ namespace FullContaxtSharpTests
         /// </summary>
         /// <param name="apiKey">API key.</param>
         /// <param name="email">Email.</param>
-        [TestCase( TestValues.ApiKey, TestValues.Person.Email )]
-        public void SearchPerson_ByEmail( string apiKey, string email )
+        [TestCase(TestValues.ApiKey, TestValues.Person.Email)]
+        public void SearchPerson_ByEmail(string apiKey, string email)
         {
             // Use the service to perform a search.
             var personData = Service.Search(
@@ -29,23 +29,23 @@ namespace FullContaxtSharpTests
             Console.WriteLine(personData.JSON);
         }
 
-		/// <summary>
-		/// Tests the ability to search for person data by a phone number.
-		/// </summary>
-		/// <param name="apiKey">API key.</param>
-		/// <param name="phoneNumber">Phone Number to test.</param>
-		[TestCase(TestValues.ApiKey, TestValues.Person.Phone)]
+        /// <summary>
+        /// Tests the ability to search for person data by a phone number.
+        /// </summary>
+        /// <param name="apiKey">API key.</param>
+        /// <param name="phoneNumber">Phone Number to test.</param>
+        [TestCase(TestValues.ApiKey, TestValues.Person.Phone)]
         public void SearchPerson_ByPhone(string apiKey, string phoneNumber)
-		{
-			// Use the service to perform a search.
-			var personData = Service.Search(
-					apiKey,
-					PersonLookup.Phone,
-					phoneNumber
-			);
+        {
+            // Use the service to perform a search.
+            var personData = Service.Search(
+                    apiKey,
+                    PersonLookup.Phone,
+                    phoneNumber
+            );
 
-			// Write the JSON as output.
-			Console.WriteLine(personData.JSON);
-		}
+            // Write the JSON as output.
+            Console.WriteLine(personData.JSON);
+        }
     }
 }

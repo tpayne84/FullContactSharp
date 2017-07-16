@@ -2,7 +2,7 @@
 using FullContactSharp;
 using NUnit.Framework;
 
-namespace FullContaxtSharpTests
+namespace FullContactSharpTests
 {
     /// <summary>
     /// Company response tests.

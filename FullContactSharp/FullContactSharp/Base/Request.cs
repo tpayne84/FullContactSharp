@@ -1,5 +1,4 @@
-﻿﻿using System.IO;
-using System.Net;
+﻿using System.Net;
 
 namespace FullContactSharp
 {
@@ -26,30 +25,30 @@ namespace FullContactSharp
         /// <value>The request.</value>
         private HttpWebRequest request { get; set; }
 
-		/// <summary>
-		/// Gets or sets the request.
-		/// </summary>
-		/// <value>The request.</value>
-		protected HttpWebResponse Response { get; set; }
+        /// <summary>
+        /// Gets or sets the request.
+        /// </summary>
+        /// <value>The request.</value>
+        protected HttpWebResponse Response { get; set; }
 
-		/// <summary>
-		/// Sends the request using the the specified apiKey and args.
-		/// Loads the Resonse.
-		/// </summary>
-		/// <returns>The initialize.</returns>
-		/// <param name="endpoint">API endpoint.</param>
-		/// <param name="apiKey">API key.</param>
-		/// <param name="parameters">HTTP params.</param>
-		public void Execute( Endpoint endpoint, string apiKey, HttpParams parameters )
+        /// <summary>
+        /// Sends the request using the the specified apiKey and args.
+        /// Loads the Resonse.
+        /// </summary>
+        /// <returns>The initialize.</returns>
+        /// <param name="endpoint">API endpoint.</param>
+        /// <param name="apiKey">API key.</param>
+        /// <param name="parameters">HTTP params.</param>
+        public void Execute(Endpoint endpoint, string apiKey, HttpParams parameters)
         {
             // Create the HTTP request.
-            this.request = (HttpWebRequest)WebRequest.Create($"https://api.fullcontact.com/v2/{endpoint.ToString().ToLower()}.json" + parameters );
+            this.request = (HttpWebRequest)WebRequest.Create($"https://api.fullcontact.com/v2/{endpoint.ToString().ToLower()}.json" + parameters);
 
             // Assign the method.
             this.request.Method = WebRequestMethods.Http.Post;
 
             // Set the accept type to json.
-           this.request.Accept = "application/json";
+            this.request.Accept = "application/json";
 
             // Set the api key header.
             this.request.Headers["X-FullContact-APIKey"] = apiKey;
@@ -57,12 +56,12 @@ namespace FullContactSharp
             // Get the Response.
             this.Response = (HttpWebResponse)this.request.GetResponse();
 
-			// Extract the JSON.
-			using (var reader = new System.IO.StreamReader(this.Response.GetResponseStream()))
-			{
+            // Extract the JSON.
+            using (var reader = new System.IO.StreamReader(this.Response.GetResponseStream()))
+            {
                 //  Store the JSON text string.
-				this.JSON = reader.ReadToEnd();
-			}
-		}
+                this.JSON = reader.ReadToEnd();
+            }
+        }
     }
 }

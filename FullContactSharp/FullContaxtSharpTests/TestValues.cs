@@ -1,4 +1,4 @@
-﻿namespace FullContaxtSharpTests
+﻿namespace FullContactSharpTests
 {
     /// <summary>
     /// Test values class.
